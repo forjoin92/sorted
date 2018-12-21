@@ -36,3 +36,21 @@ func SelectionSort(array []int) {
 		array[i], array[temp] = array[temp], array[i]
 	}
 }
+
+// InsertionSort insertion sort
+func InsertionSort(array []int) {
+	l := len(array)
+
+	if l <= 1 {
+		return
+	}
+
+	for i := 0; i < l; i++ {
+		for j := i; j > 0; j-- {
+			if array[j] >= array[j-1] {
+				break
+			}
+			array[j], array[j-1] = array[j-1], array[j]
+		}
+	}
+}
