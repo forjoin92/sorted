@@ -26,3 +26,10 @@ func TestInsertionSort(t *testing.T) {
 	InsertionSort(array)
 	assert.Equal(t, array, []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
 }
+
+func TestQuickSort(t *testing.T) {
+	var array = []int{5,2,3,1}
+
+	QuickSort(array)
+	assert.Equal(t, array, []int{1,2,3,5})
+}
